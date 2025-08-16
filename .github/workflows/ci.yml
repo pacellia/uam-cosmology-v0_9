@@ -1,0 +1,38 @@
+name: CI (smoke)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps (best effort)
+        run: |
+          if [ -f env/requirements.txt ]; then
+            python -m pip install --upgrade pip
+            pip install -r env/requirements.txt || true
+          else
+            python -m pip install --upgrade pip
+          fi
+          # minimal safety net
+          pip install numpy scipy
+
+      - name: Run quickstart smoke
+        run: |
+          python scripts/run_quickstart.py
+
+              open("results/ci_smoke.json","w"),
+              indent=2
+          )
+          print("SMOKE PASS")
+          PY
