@@ -1,0 +1,31 @@
+{
+  "H0_km_s_Mpc": 70.0,
+  "z_switch": 2.0,
+  "z_star": 1090.0,
+  "ellA_target": 300.0,
+  "p_early": 2.0,
+  "p_mid_star": 1.5038921819860502,
+  "continuity": {
+    "E_left_at_z_switch": 0.9632376058827975,
+    "E_mid_at_z_switch": 0.9632376058827975,
+    "E_mid_at_z_star": 6835.265641985685,
+    "E_early_at_z_star": 6835.265641985685
+  },
+  "distances": {
+    "D_M_zstar_Mpc": 33102.274306167325,
+    "D_A_zstar_Mpc": 30.34122301206904
+  },
+  "sound_horizon": {
+    "r_s_comoving_Mpc": 346.646210702181,
+    "r_s_proper_Mpc": 0.3177325487646022,
+    "Omega_b_h2": 0.0224,
+    "T_CMB_K": 2.7255
+  },
+  "ell_A": 299.9999958652804,
+  "notes": [
+    "PX1 governs z <= z_switch (SN/BAO), untouched.",
+    "Mid branch exponent p_mid is calibrated so that ell_A = pi * D_A(z*) / r_s(proper) hits the target.",
+    "Early branch fixed p_early = 2.0 ensures finite sound horizon.",
+    "This is a guardrail closure pending beta-derived strong-z E(w)."
+  ]
+}

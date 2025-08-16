@@ -1,0 +1,13 @@
+Export created: 2025-08-16T15:16:19.837700Z
+Source root: /content/uam_validation
+Includes:
+  - theory/uam_model.py
+  - theory/guardrail.json
+  - env/requirements.txt (if present)
+  - env/requirements.lock.txt
+  - results/*.json
+  - notebooks/*.ipynb (if present)
+  - scripts/*.py (if present)
+  - docs/*.md (if present)
+
+Guardrail (from latest lock or defaults): {"mapping": "px1", "z_switch": 2.0, "z_star": 1090.0, "p_mid": 1.503892, "p_early": 2.0, "rs_proxy_Mpc": 147.0}
